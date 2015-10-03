@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this, "You are wrong!", Toast.LENGTH_SHORT).show();
             score -= 5;
+            Toast.makeText(this, "Last number was " + number, Toast.LENGTH_SHORT).show();
         }
+
         start();
 
     }
@@ -43,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this, "You are wrong!", Toast.LENGTH_SHORT).show();
             score -= 5;
+            Toast.makeText(this, "Last number was " + number, Toast.LENGTH_SHORT).show();
         }
+
         start();
     }
 
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayRandomNumber(){
         Random random = new Random();
-        number = 2 + random.nextInt(199);
+        number = 2 + random.nextInt(999);
         TextView tnum = (TextView) findViewById(R.id.number);
         tnum.setText("" + number);
     }
